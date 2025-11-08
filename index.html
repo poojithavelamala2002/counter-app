@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Counter App — DOM Manipulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap" role="main">
+    <section class="card" aria-labelledby="title">
+      <h1 id="title">Simple Counter</h1>
+      <p class="subtitle">A minimal counter built with vanilla JavaScript</p>
+
+      <div class="display" aria-live="polite" id="countDisplay">0</div>
+
+      <div class="controls" role="group" aria-label="Counter controls">
+        <button id="decrement" class="btn" aria-label="Decrement counter">−</button>
+        <button id="increment" class="btn" aria-label="Increment counter">+</button>
+        <button id="reset" class="btn neutral" aria-label="Reset counter">Reset</button>
+      </div>
+
+      <p class="note" id="note">Count cannot go below zero.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

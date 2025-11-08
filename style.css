@@ -1,0 +1,89 @@
+:root{
+  --bg: #f7f9fc;
+  --card:#ffffff;
+  --accent:#1f6feb;
+  --muted:#6b7280;
+  --danger:#ef4444;
+  --radius:14px;
+  --shadow: 0 8px 30px rgba(16,24,40,0.06);
+  font-size:16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+  background:linear-gradient(180deg,var(--bg),#ffffff);
+  color:#0f172a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.wrap{width:100%; max-width:420px}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+h1{margin:0; font-size:1.25rem; letter-spacing:0.2px}
+.subtitle{margin:8px 0 18px 0; color:var(--muted); font-size:0.95rem}
+
+.display{
+  font-size:3.2rem;
+  font-weight:700;
+  margin:18px 0;
+  padding:20px 12px;
+  border-radius:12px;
+  background:linear-gradient(180deg,#fbfdff,#f3f7ff);
+  border:1px solid rgba(31,111,235,0.06);
+  color:#0b1220;
+  min-width:160px;
+}
+
+/* controls */
+.controls{display:flex; gap:12px; justify-content:center; align-items:center; margin-top:10px}
+.btn{
+  min-width:60px;
+  padding:12px 14px;
+  border-radius:10px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  font-weight:700;
+  font-size:1.1rem;
+  cursor:pointer;
+  transition:transform .08s ease, box-shadow .12s;
+  box-shadow: 0 6px 20px rgba(31,111,235,0.12);
+}
+
+.btn:active{transform:translateY(1px)}
+.btn:focus{outline:3px solid rgba(31,111,235,0.14); outline-offset:3px}
+.btn.neutral{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid rgba(15,23,42,0.06);
+  box-shadow:none;
+}
+
+/* disabled state for decrement when at zero */
+.btn[aria-disabled="true"]{
+  opacity:0.5;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+
+/* small note */
+.note{margin-top:14px; color:var(--muted); font-size:0.9rem}
+
+/* responsive */
+@media (max-width:420px){
+  .display{font-size:2.6rem; padding:16px}
+  .btn{min-width:48px; padding:10px}
+}
