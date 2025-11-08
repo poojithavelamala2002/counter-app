@@ -1,4 +1,4 @@
-# Task 3 – Counter App
+# Counter App
 
 ## Overview
 This is a simple **Counter Application** built using **HTML, CSS, and Vanilla JavaScript** as part of the Codveda Front-End Internship tasks.
